@@ -1,4 +1,6 @@
-/* Configuración general */
+/* ==========================================
+   1. CONFIGURACIÓN GENERAL
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -11,134 +13,70 @@ body {
     color: #ffffff;
 }
 
-/* Barra de navegación */
+/* ==========================================
+   2. BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background-color: #161b22;
-    border-bottom: 1px solid #30363d;
+    padding: 15px 40px;
+    background-color: #0b0e14;
+    border-bottom: 1px solid #1f242d;
 }
 
 .nav-logo {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     color: #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #8b949e;
     font-weight: 500;
+    font-size: 14px;
     transition: color 0.2s;
 }
 
 .nav-links a:hover, .nav-links a.active {
-    color: #58a6ff;
+    color: #ffffff;
 }
 
 .nav-search input {
-    padding: 8px 15px;
-    border-radius: 6px;
-    border: 1px solid #30363d;
-    background-color: #0d1117;
-    color: #ffffff;
-    width: 280px;
-}
-
-.nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.cart-icon {
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.btn-login {
-    background-color: #21262d;
-    color: #ffffff;
-    border: 1px solid #30363d;
     padding: 8px 16px;
     border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
+    border: 1px solid #1f242d;
+    background-color: #12161f;
+    color: #ffffff;
+    width: 280px;
+    font-size: 13px;
+    outline: none;
 }
 
-.nav-avatar {
-    width: 35px;
-    height: 35px;
-    background-color: #8957e5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
+.nav-search input::placeholder {
+    color: #6b7280;
 }
 
-/* Contenedor principal y secciones */
+.nav-search input:focus {
+    border-color: #58a6ff;
+}
+
+/* ==========================================
+   3. CONTENEDOR PRINCIPAL Y SECCIONES
+   ========================================== */
 main {
     padding: 40px;
 }
 
-.hero {
-    display: flex;
-    justify-content: space-between;
-    background: linear-gradient(135deg, #0d1117, #161b22);
-    border: 1px solid #30363d;
-    padding: 40px;
-    border-radius: 12px;
-    margin-bottom: 40px;
-}
-
-.hero-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    margin-bottom: 20px;
-    font-size: 16px;
-    color: #8b949e;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn-primary {
-    background-color: #8957e5;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    color: #ffffff;
-    border: 1px solid #30363d;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-}
-
-/* Secciones de juegos y cuadrícula */
 .game-section {
     margin-bottom: 40px;
 }
@@ -148,6 +86,10 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+}
+
+.section-header h2 {
+    font-size: 22px;
 }
 
 .view-all {
@@ -178,12 +120,39 @@ main {
     transform: translateY(-4px);
 }
 
+/* ==========================================
+   4. ESPACIO DELIMITADO PARA IMÁGENES
+   ========================================== */
 .game-img {
     width: 100%;
-    height: 130px;
+    height: 140px;
     background-color: #21262d;
+    border: 1px dashed #484f58;
     border-radius: 6px;
     margin-bottom: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Mensaje visual que se muestra si la imagen aún no existe o falla al cargar */
+.game-img::before {
+    content: "🖼️ Espacio Imagen";
+    color: #8b949e;
+    font-size: 12px;
+    font-weight: 500;
+    position: absolute;
+}
+
+.game-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
 .game-info {
@@ -209,14 +178,9 @@ main {
     color: #3fb950;
 }
 
-.game-price-old {
-    font-size: 12px;
-    color: #8b949e;
-    text-decoration: line-through;
-    display: block;
-}
-
-/* Botones de compra (Soporta <button> y etiquetas <a> con el tono morado exacto) */
+/* ==========================================
+   5. BOTONES DE COMPRA Y ACCIONES
+   ========================================== */
 .btn-buy, a.btn-buy {
     background-color: #8957e5;
     color: #ffffff;
@@ -237,17 +201,113 @@ main {
     background-color: #794bc4;
 }
 
-/* Catálogo específico */
-.catalogo-main {
-    padding: 40px;
+/* ==========================================
+   6. VISTAS DETALLE DE JUEGO, CONFIRMACIÓN Y ÉXITO
+   ========================================== */
+.game-detail-card, .confirmation-box, .success-box {
+    max-width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    text-align: center;
 }
 
-.catalogo-title {
+.game-image-container {
+    width: 100%;
+    height: 220px;
+    background-color: #21262d;
+    border: 1px dashed #484f58;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.game-image-container::before {
+    content: "🖼️ Imagen del Juego";
+    color: #8b949e;
+    font-size: 14px;
+    font-weight: 500;
+    position: absolute;
+}
+
+.detail-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+.game-detail-info h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.game-detail-info .category {
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 12px;
+}
+
+.game-detail-info .description {
+    font-size: 14px;
+    color: #c9d1d9;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.game-detail-info .price {
+    font-size: 22px;
+    font-weight: bold;
+    color: #3fb950;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-danger {
+    background-color: #21262d;
+    color: #f85149;
+    border: 1px solid #30363d;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+    background-color: #30363d;
+}
+
+.icon-check {
+    width: 60px;
+    height: 60px;
+    background-color: #238636;
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 28px;
-    margin-bottom: 30px;
+    margin: 0 auto 20px auto;
 }
 
-/* Pie de página (Footer) */
+/* ==========================================
+   7. PIE DE PÁGINA (FOOTER)
+   ========================================== */
 .footer {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
