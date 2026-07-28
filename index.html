@@ -3,257 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore</title>
+    <title>GameStore - Tienda de Juegos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="navbar">
-        <div class="nav-logo">GameStore</div>
+        <div class="nav-logo">
+            🎮 <i>GameStore</i>
+        </div>
+        
         <nav class="nav-links">
             <a href="index.html" class="active">Inicio</a>
             <a href="catalogo.html">Catálogo</a>
-            <a href="mas-vendidos.html">Mas vendidos</a>
+            <a href="mas-vendidos.html">Más vendidos</a>
             <a href="ofertas.html">Ofertas</a>
             <a href="contacto.html">Contacto</a>
         </nav>
+
         <div class="nav-search">
-            <input type="text" placeholder="Buscar juegos, géneros o desarrolladores">
-        </div>
-        <div class="nav-actions">
-            <span class="cart-icon">🛒</span>
-            <button class="btn-login">Iniciar sesión</button>
-            <div class="nav-avatar">A</div>
+            <input type="text" placeholder="🔍 Buscar juegos, géneros o desarrolladores">
         </div>
     </header>
 
     <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h1>Cyberpunk 2077</h1>
-                <p>Explora Night City, una ciudad futurista llena de acción, tecnología y aventuras.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">Comprar ahora</button>
-                    <a href="catalogo.html" class="btn-secondary">ver más</a>
-                </div>
-            </div>
-            <div class="hero-banner"></div>
-        </section>
 
-        <!-- Sección: Juegos Populares -->
         <section class="game-section">
             <div class="section-header">
-                <h2>🔥 Juegos Populares</h2>
-                <a href="catalogo.html" class="view-all">Ver todos &rarr;</a>
+                <h2>🔥 Destacados</h2>
             </div>
             <div class="game-grid">
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/gta5.jpg" alt="Grand Theft Auto V">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Grand Theft Auto V</h3>
                         <span class="game-category">Acción • Mundo Abierto</span>
                         <div class="game-price">$29.99</div>
                     </div>
-                    <a href="gta5.html" class="btn-buy">Comprar</a>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/minecraft.jpg" alt="Minecraft Java">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Minecraft Java</h3>
                         <span class="game-category">Aventura • Mundo Abierto</span>
                         <div class="game-price">$19.99</div>
                     </div>
-                    <a href="minecraft.html" class="btn-buy">Comprar</a>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/fc25.jpg" alt="EA Sports FC 25">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">EA Sports FC 25</h3>
                         <span class="game-category">Deportes • Simulación</span>
                         <div class="game-price">$59.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/valorant.jpg" alt="Valorant">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Valorant</h3>
                         <span class="game-category">Acción • Multijugador</span>
                         <div class="game-price">Gratis</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
             </div>
         </section>
 
-        <!-- Sección: Nuevos Lanzamientos -->
         <section class="game-section">
             <div class="section-header">
-                <h2>🆕 Nuevos Lanzamientos</h2>
-                <a href="catalogo.html" class="view-all">Ver todos &rarr;</a>
+                <h2>🔥 Nuevos Lanzamientos</h2>
+                <a href="catalogo.html" class="view-all">Ver todos →</a>
             </div>
             <div class="game-grid">
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/wukong.jpg" alt="Black Myth: Wukong">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Black Myth: Wukong</h3>
                         <span class="game-category">Acción • RPG</span>
                         <div class="game-price">$59.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/expedition33.jpg" alt="Clair Obscur: Expedition 33">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Clair Obscur: Expedition 33</h3>
                         <span class="game-category">Fantasía • RPG</span>
                         <div class="game-price">$49.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/doom.jpg" alt="DOOM: The Dark Ages">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">DOOM: The Dark Ages</h3>
                         <span class="game-category">Acción • Shooter</span>
                         <div class="game-price">$69.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/kingdomcome2.jpg" alt="Kingdom Come: Deliverance II">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Kingdom Come: Deliverance II</h3>
                         <span class="game-category">Medieval • RPG</span>
                         <div class="game-price">$59.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
             </div>
         </section>
 
-        <!-- Sección: Ofertas -->
         <section class="game-section">
             <div class="section-header">
                 <h2>🏷️ Ofertas</h2>
-                <a href="ofertas.html" class="view-all">Ver todos &rarr;</a>
+                <a href="ofertas.html" class="view-all">Ver todos →</a>
             </div>
             <div class="game-grid">
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/rdr2.jpg" alt="Red Dead Redemption 2">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Red Dead Redemption 2</h3>
-                        <span class="game-price-old">Precio Original $59.99</span>
+                        <span class="game-category">Acción • Mundo Abierto</span>
                         <div class="game-price">Oferta $19.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/witcher3.jpg" alt="The Witcher 3">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">The Witcher 3</h3>
-                        <span class="game-price-old">Precio Original $39.99</span>
+                        <span class="game-category">Rol • Fantasía</span>
                         <div class="game-price">Oferta $9.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/re4.jpg" alt="Resident Evil 4">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Resident Evil 4</h3>
-                        <span class="game-price-old">Precio Original $49.99</span>
+                        <span class="game-category">Terror • Acción</span>
                         <div class="game-price">Oferta $24.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/hogwarts.jpg" alt="Hogwarts Legacy">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Hogwarts Legacy</h3>
-                        <span class="game-price-old">Precio Original $59.99</span>
+                        <span class="game-category">Magia • Mundo Abierto</span>
                         <div class="game-price">Oferta $29.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
             </div>
         </section>
 
-        <!-- Sección: Más Vendidos -->
         <section class="game-section">
             <div class="section-header">
                 <h2>⭐ Más Vendidos</h2>
-                <a href="mas-vendidos.html" class="view-all">Ver todos &rarr;</a>
             </div>
             <div class="game-grid">
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/eldenring.jpg" alt="Elden Ring">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Elden Ring</h3>
                         <span class="game-category">Acción • RPG</span>
                         <div class="game-price">$59.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/baldursgate3.jpg" alt="Baldur's Gate 3">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Baldur's Gate 3</h3>
                         <span class="game-category">Acción • Estrategia</span>
                         <div class="game-price">$39.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/helldivers2.jpg" alt="Helldivers 2">
+                    </div>
                     <div class="game-info">
                         <h3 class="game-title">Helldivers 2</h3>
                         <span class="game-category">Acción • Cooperativo</span>
                         <div class="game-price">$49.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
                 <div class="game-card">
-                    <div class="game-img"></div>
+                    <div class="game-img">
+                        <img src="img/forza5.jpg" alt="Forza Horizon 5">
+                    </div>
                     <div class="game-info">
-                        <h3 class="game-title">Forza Horizon 6</h3>
+                        <h3 class="game-title">Forza Horizon 5</h3>
                         <span class="game-category">Carreras</span>
                         <div class="game-price">$59.99</div>
                     </div>
-                    <button class="btn-buy">Comprar</button>
+                    <a href="confirm.html" class="btn-buy">Comprar</a>
                 </div>
+
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <div class="footer-col footer-brand">
-            <div class="footer-logo">GameStore</div>
-            <p>Explora los mejores videojuegos para PC, PlayStation y Xbox.</p>
+        <div class="footer-col">
+            <div class="footer-logo">🎮 GameStore</div>
+            <p>Explora los mejores videojuegos al mejor precio del mercado.</p>
         </div>
         <div class="footer-col">
             <h3>Enlaces</h3>
             <a href="index.html">Inicio</a>
-            <a href="catalogo.html">Juegos</a>
-            <a href="#">Categorias</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="mas-vendidos.html">Más vendidos</a>
             <a href="ofertas.html">Ofertas</a>
             <a href="contacto.html">Contacto</a>
         </div>
         <div class="footer-col">
             <h3>Soporte</h3>
-            <a href="#">Centro de ayuda</a>
-            <a href="#">Preguntas frecuentes</a>
-            <a href="#">Política de privacidad</a>
-            <a href="#">Términos y condiciones</a>
+            <a href="#">Preguntas Frecuentes</a>
+            <a href="#">Términos de Servicio</a>
+            <a href="#">Política de Privacidad</a>
         </div>
         <div class="footer-col">
-            <h3>Síguenos</h3>
-            <a href="#">Facebook</a>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
+            <h3>Redes Sociales</h3>
             <a href="#">Discord</a>
+            <a href="#">Twitter / X</a>
+            <a href="#">YouTube</a>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
+            &copy; 2026 GameStore - Todos los derechos reservados.
         </div>
     </footer>
 
