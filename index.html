@@ -4,929 +4,258 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameStore</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo" onclick="switchView('inicio')">
-            <span>🎮</span> GameStore
-        </div>
-        <nav>
-            <ul>
-                <li><a onclick="switchView('inicio')">Inicio</a></li>
-                <li><a onclick="switchView('catalogo')">Catalogo</a></li>
-                <li><a onclick="switchView('mas-vendidos')">Mas vendidos</a></li>
-                <li><a onclick="switchView('ofertas')">Ofertas</a></li>
-                <li><a onclick="switchView('contacto')">Contacto</a></li>
-            </ul>
+    <header class="navbar">
+        <div class="nav-logo">GameStore</div>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="mas-vendidos.html">Mas vendidos</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="contacto.html">Contacto</a>
         </nav>
-        <div class="header-right">
-            <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass" style="color: #718096; margin-right: 8px; font-size: 0.8rem;"></i>
-                <input type="text" placeholder="Buscar juegos, géneros o desarrolladores">
-            </div>
-            <div class="cart-icon">🛒<span class="cart-badge">2</span></div>
+        <div class="nav-search">
+            <input type="text" placeholder="Buscar juegos, géneros o desarrolladores">
+        </div>
+        <div class="nav-actions">
+            <span class="cart-icon">🛒</span>
             <button class="btn-login">Iniciar sesión</button>
-            <div class="user-avatar">A</div>
+            <div class="nav-avatar">A</div>
         </div>
     </header>
 
-    <!-- VISTA 1: INICIO -->
-    <div id="view-inicio" class="page-view active-view">
+    <main>
         <section class="hero">
             <div class="hero-content">
                 <h1>Cyberpunk 2077</h1>
                 <p>Explora Night City, una ciudad futurista llena de acción, tecnología y aventuras.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary" onclick="switchView('cyberpunk-detalle')">Comprar ahora</button>
-                    <button class="btn-secondary" onclick="switchView('catalogo')">ver más</button>
+                    <button class="btn-primary">Comprar ahora</button>
+                    <a href="catalogo.html" class="btn-secondary">ver más</a>
                 </div>
             </div>
-            <div class="hero-image-placeholder">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqz.png" alt="Cyberpunk 2077">
-            </div>
+            <div class="hero-banner"></div>
         </section>
 
-        <section class="section">
+        <!-- Sección: Juegos Populares -->
+        <section class="game-section">
             <div class="section-header">
-                <h2 class="section-title">🔥 Juegos Populares</h2>
-                <a class="see-all" onclick="switchView('catalogo')">Ver todos →</a>
+                <h2>🔥 Juegos Populares</h2>
+                <a href="catalogo.html" class="view-all">Ver todos &rarr;</a>
             </div>
             <div class="game-grid">
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1vzz.png" alt="GTA V"></div>
-                        <div class="game-info">
-                            <h3>Grand Theft Auto V</h3>
-                            <p>Acción • Mundo Abierto</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Grand Theft Auto V</h3>
+                        <span class="game-category">Acción • Mundo Abierto</span>
+                        <div class="game-price">$29.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$29.99</div></div>
-                        <button class="btn-buy" onclick="switchView('gta-detalle')">Comprar</button>
-                    </div>
+                    <a href="gta5.html" class="btn-buy">Comprar</a>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.png" alt="Minecraft"></div>
-                        <div class="game-info">
-                            <h3>Minecraft Java</h3>
-                            <p>Aventura • Mundo Abierto</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Minecraft Java</h3>
+                        <span class="game-category">Aventura • Mundo Abierto</span>
+                        <div class="game-price">$19.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$19.99</div></div>
-                        <button class="btn-buy" onclick="switchView('minecraft-detalle')">Comprar</button>
-                    </div>
+                    <a href="minecraft.html" class="btn-buy">Comprar</a>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7y52.png" alt="EA Sports FC 25"></div>
-                        <div class="game-info">
-                            <h3>EA Sports FC 25</h3>
-                            <p>Deportes • Simulación</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">EA Sports FC 25</h3>
+                        <span class="game-category">Deportes • Simulación</span>
+                        <div class="game-price">$59.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('fc25-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co49xa.png" alt="Valorant"></div>
-                        <div class="game-info">
-                            <h3>Valorant</h3>
-                            <p>Acción • Multijugador</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Valorant</h3>
+                        <span class="game-category">Acción • Multijugador</span>
+                        <div class="game-price">Gratis</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price" style="color: #48bb78 !important;">Gratis</div></div>
-                        <button class="btn-buy" onclick="switchView('valorant-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Sección: Nuevos Lanzamientos -->
+        <section class="game-section">
             <div class="section-header">
-                <h2 class="section-title">✨ Nuevos Lanzamientos</h2>
-                <a class="see-all" onclick="switchView('catalogo')">Ver todos →</a>
+                <h2>🆕 Nuevos Lanzamientos</h2>
+                <a href="catalogo.html" class="view-all">Ver todos &rarr;</a>
             </div>
             <div class="game-grid">
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6w89.png" alt="Black Myth: Wukong"></div>
-                        <div class="game-info">
-                            <h3>Black Myth: Wukong</h3>
-                            <p>Acción • RPG</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Black Myth: Wukong</h3>
+                        <span class="game-category">Acción • RPG</span>
+                        <div class="game-price">$59.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('wukong-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7k5w.png" alt="Clair Obscur"></div>
-                        <div class="game-info">
-                            <h3>Clair Obscur: Expedition 33</h3>
-                            <p>Fantasía • RPG</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Clair Obscur: Expedition 33</h3>
+                        <span class="game-category">Fantasía • RPG</span>
+                        <div class="game-price">$49.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$49.99</div></div>
-                        <button class="btn-buy" onclick="switchView('clair-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8j9k.png" alt="DOOM"></div>
-                        <div class="game-info">
-                            <h3>DOOM: The Dark Ages</h3>
-                            <p>Acción • Shooter</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">DOOM: The Dark Ages</h3>
+                        <span class="game-category">Acción • Shooter</span>
+                        <div class="game-price">$69.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$69.99</div></div>
-                        <button class="btn-buy" onclick="switchView('doom-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7c1e.png" alt="Kingdom Come II"></div>
-                        <div class="game-info">
-                            <h3>Kingdom Come: Deliverance II</h3>
-                            <p>Medieval • RPG</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Kingdom Come: Deliverance II</h3>
+                        <span class="game-category">Medieval • RPG</span>
+                        <div class="game-price">$59.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('kingdom-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Sección: Ofertas -->
+        <section class="game-section">
             <div class="section-header">
-                <h2 class="section-title">⭐ Más Vendidos</h2>
-                <a class="see-all" onclick="switchView('mas-vendidos')">Ver todos →</a>
+                <h2>🏷️ Ofertas</h2>
+                <a href="ofertas.html" class="view-all">Ver todos &rarr;</a>
             </div>
             <div class="game-grid">
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png" alt="Elden Ring"></div>
-                        <div class="game-info">
-                            <h3>Elden Ring</h3>
-                            <p>Acción • RPG</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Red Dead Redemption 2</h3>
+                        <span class="game-price-old">Precio Original $59.99</span>
+                        <div class="game-price">Oferta $19.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('elden-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co67cn.png" alt="Baldur's Gate 3"></div>
-                        <div class="game-info">
-                            <h3>Baldur's Gate 3</h3>
-                            <p>Acción • Estrategias</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">The Witcher 3</h3>
+                        <span class="game-price-old">Precio Original $39.99</span>
+                        <div class="game-price">Oferta $9.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$39.99</div></div>
-                        <button class="btn-buy" onclick="switchView('baldur-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co64bl.png" alt="Helldivers 2"></div>
-                        <div class="game-info">
-                            <h3>Helldivers 2</h3>
-                            <p>Acción • Cooperativo</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Resident Evil 4</h3>
+                        <span class="game-price-old">Precio Original $49.99</span>
+                        <div class="game-price">Oferta $24.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$49.99</div></div>
-                        <button class="btn-buy" onclick="switchView('helldivers-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8vbc.png" alt="Forza Horizon 6"></div>
-                        <div class="game-info">
-                            <h3>Forza Horizon 6</h3>
-                            <p>Carreras</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Hogwarts Legacy</h3>
+                        <span class="game-price-old">Precio Original $59.99</span>
+                        <div class="game-price">Oferta $29.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('forza-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
             </div>
         </section>
 
-        <section class="section">
+        <!-- Sección: Más Vendidos -->
+        <section class="game-section">
             <div class="section-header">
-                <h2 class="section-title">💸 Ofertas</h2>
-                <a class="see-all" onclick="switchView('ofertas')">Ver todas →</a>
+                <h2>⭐ Más Vendidos</h2>
+                <a href="mas-vendidos.html" class="view-all">Ver todos &rarr;</a>
             </div>
             <div class="game-grid">
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2q0g.png" alt="RDR2"></div>
-                        <div class="game-info">
-                            <h3>Red Dead Redemption 2</h3>
-                            <p class="old-price">Precio Original $59.99</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Elden Ring</h3>
+                        <span class="game-category">Acción • RPG</span>
+                        <div class="game-price">$59.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $19.99</div></div>
-                        <button class="btn-buy" onclick="switchView('rdr2-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.png" alt="The Witcher 3"></div>
-                        <div class="game-info">
-                            <h3>The Witcher 3</h3>
-                            <p class="old-price">Precio Original $39.99</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Baldur's Gate 3</h3>
+                        <span class="game-category">Acción • Estrategia</span>
+                        <div class="game-price">$39.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $9.99</div></div>
-                        <button class="btn-buy" onclick="switchView('witcher-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5vny.png" alt="Resident Evil 4"></div>
-                        <div class="game-info">
-                            <h3>Resident Evil 4</h3>
-                            <p class="old-price">Precio Original $49.99</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Helldivers 2</h3>
+                        <span class="game-category">Acción • Cooperativo</span>
+                        <div class="game-price">$49.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $24.99</div></div>
-                        <button class="btn-buy" onclick="switchView('re4-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
                 <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5upo.png" alt="Hogwarts Legacy"></div>
-                        <div class="game-info">
-                            <h3>Hogwarts Legacy</h3>
-                            <p class="old-price">Precio Original $59.99</p>
-                        </div>
+                    <div class="game-img"></div>
+                    <div class="game-info">
+                        <h3 class="game-title">Forza Horizon 6</h3>
+                        <span class="game-category">Carreras</span>
+                        <div class="game-price">$59.99</div>
                     </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $29.99</div></div>
-                        <button class="btn-buy" onclick="switchView('hogwarts-detalle')">Comprar</button>
-                    </div>
+                    <button class="btn-buy">Comprar</button>
                 </div>
             </div>
         </section>
-    </div>
+    </main>
 
-    <!-- VISTA 2: CATALOGO -->
-    <div id="view-catalogo" class="page-view">
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Catalogo</h2>
-            </div>
-            <div class="game-grid">
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqz.png" alt="Cyberpunk 2077"></div>
-                        <div class="game-info">
-                            <h3>Cyberpunk 2077</h3>
-                            <p>Acción • RPG</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('cyberpunk-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1vzz.png" alt="GTA V"></div>
-                        <div class="game-info">
-                            <h3>Grand Theft Auto V</h3>
-                            <p>Acción • Mundo Abierto</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$29.99</div></div>
-                        <button class="btn-buy" onclick="switchView('gta-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.png" alt="Minecraft"></div>
-                        <div class="game-info">
-                            <h3>Minecraft Java</h3>
-                            <p>Aventura • Mundo Abierto</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$19.99</div></div>
-                        <button class="btn-buy" onclick="switchView('minecraft-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7y52.png" alt="EA Sports FC 25"></div>
-                        <div class="game-info">
-                            <h3>EA Sports FC 25</h3>
-                            <p>Deportes • Simulación</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('fc25-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co49xa.png" alt="Valorant"></div>
-                        <div class="game-info">
-                            <h3>Valorant</h3>
-                            <p>Acción • Multijugador</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price" style="color: #48bb78 !important;">Gratis</div></div>
-                        <button class="btn-buy" onclick="switchView('valorant-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6w89.png" alt="Black Myth: Wukong"></div>
-                        <div class="game-info">
-                            <h3>Black Myth: Wukong</h3>
-                            <p>Acción • RPG</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('wukong-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7k5w.png" alt="Clair Obscur"></div>
-                        <div class="game-info">
-                            <h3>Clair Obscur: Expedition 33</h3>
-                            <p>Fantasía • RPG</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$49.99</div></div>
-                        <button class="btn-buy" onclick="switchView('clair-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8j9k.png" alt="DOOM"></div>
-                        <div class="game-info">
-                            <h3>DOOM: The Dark Ages</h3>
-                            <p>Acción • Shooter</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$69.99</div></div>
-                        <button class="btn-buy" onclick="switchView('doom-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7c1e.png" alt="Kingdom Come II"></div>
-                        <div class="game-info">
-                            <h3>Kingdom Come: Deliverance II</h3>
-                            <p>Medieval • RPG</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('kingdom-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2q0g.png" alt="RDR2"></div>
-                        <div class="game-info">
-                            <h3>Red Dead Redemption 2</h3>
-                            <p class="old-price">Precio Original $59.99</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $19.99</div></div>
-                        <button class="btn-buy" onclick="switchView('rdr2-detalle')">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- VISTA 3: MAS VENDIDOS -->
-    <div id="view-mas-vendidos" class="page-view">
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Mas vendidos</h2>
-            </div>
-            <div class="game-grid">
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png" alt="Elden Ring"></div>
-                        <div class="game-info">
-                            <h3>Elden Ring</h3>
-                            <p>Acción • RPG</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('elden-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co67cn.png" alt="Baldur's Gate 3"></div>
-                        <div class="game-info">
-                            <h3>Baldur's Gate 3</h3>
-                            <p>Acción • Estrategias</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$39.99</div></div>
-                        <button class="btn-buy" onclick="switchView('baldur-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co64bl.png" alt="Helldivers 2"></div>
-                        <div class="game-info">
-                            <h3>Helldivers 2</h3>
-                            <p>Acción • Cooperativo</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$49.99</div></div>
-                        <button class="btn-buy" onclick="switchView('helldivers-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8vbc.png" alt="Forza Horizon 6"></div>
-                        <div class="game-info">
-                            <h3>Forza Horizon 6</h3>
-                            <p>Carreras</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="price">$59.99</div></div>
-                        <button class="btn-buy" onclick="switchView('forza-detalle')">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- VISTA 4: OFERTAS -->
-    <div id="view-ofertas" class="page-view">
-        <section class="section">
-            <div class="section-header">
-                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Ofertas</h2>
-            </div>
-            <div class="game-grid">
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2q0g.png" alt="RDR2"></div>
-                        <div class="game-info">
-                            <h3>Red Dead Redemption 2</h3>
-                            <p class="old-price">Precio Original $59.99</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $19.99</div></div>
-                        <button class="btn-buy" onclick="switchView('rdr2-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.png" alt="The Witcher 3"></div>
-                        <div class="game-info">
-                            <h3>The Witcher 3</h3>
-                            <p class="old-price">Precio Original $39.99</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $9.99</div></div>
-                        <button class="btn-buy" onclick="switchView('witcher-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5vny.png" alt="Resident Evil 4"></div>
-                        <div class="game-info">
-                            <h3>Resident Evil 4</h3>
-                            <p class="old-price">Precio Original $49.99</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $24.99</div></div>
-                        <button class="btn-buy" onclick="switchView('re4-detalle')">Comprar</button>
-                    </div>
-                </div>
-                <div class="game-card">
-                    <div>
-                        <div class="game-thumbnail"><img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5upo.png" alt="Hogwarts Legacy"></div>
-                        <div class="game-info">
-                            <h3>Hogwarts Legacy</h3>
-                            <p class="old-price">Precio Original $59.99</p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="price-container"><div class="sale-price">Oferta $29.99</div></div>
-                        <button class="btn-buy" onclick="switchView('hogwarts-detalle')">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <!-- VISTA 5: CONTACTO -->
-    <div id="view-contacto" class="page-view">
-        <section class="section" style="max-width: 600px; margin: 0 auto;">
-            <div class="section-header">
-                <h2 class="section-title" style="font-size: 2rem; margin-bottom: 10px;">Contacto</h2>
-            </div>
-            <p style="color: #a0aec0; margin-bottom: 20px;">¿Tienes alguna duda o problema con tu compra? Envíanos un mensaje.</p>
-            <form style="display: flex; flex-direction: column; gap: 15px;">
-                <input type="text" placeholder="Tu nombre" style="padding: 12px; border-radius: 8px; border: 1px solid #1a2238; background: #131b2e; color: white; outline: none;">
-                <input type="email" placeholder="Tu correo electrónico" style="padding: 12px; border-radius: 8px; border: 1px solid #1a2238; background: #131b2e; color: white; outline: none;">
-                <textarea placeholder="Tu mensaje" rows="5" style="padding: 12px; border-radius: 8px; border: 1px solid #1a2238; background: #131b2e; color: white; outline: none; resize: none;"></textarea>
-                <button type="submit" class="btn-primary" style="width: 100%;">Enviar mensaje</button>
-            </form>
-        </section>
-    </div>
-
-    <!-- PANTALLA DE CONFIRMACIÓN -->
-    <div id="view-confirmacion" class="page-view">
-        <div class="modal-screen-container">
-            <h2 class="confirm-title">Estas seguro de lo que vaz acomprar</h2>
-            <p class="confirm-subtitle">Esta acción no se puede deshacer una vez confirmada.</p>
-            <button class="modal-btn" onclick="switchView('exito')">Comprar</button>
-            <button class="modal-btn" onclick="switchView('inicio')">no</button>
+    <footer class="footer">
+        <div class="footer-col footer-brand">
+            <div class="footer-logo">GameStore</div>
+            <p>Explora los mejores videojuegos para PC, PlayStation y Xbox.</p>
         </div>
-    </div>
-
-    <!-- PANTALLA DE COMPRA EXITOSA -->
-    <div id="view-exito" class="page-view">
-        <div class="modal-screen-container">
-            <button class="modal-btn" style="cursor: default;">¡Compra exitosa!</button>
-            <div class="success-box">
-                <i class="fa-solid fa-check"></i>
-            </div>
-            <button class="modal-btn" onclick="switchView('inicio')">Regresar</button>
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Juegos</a>
+            <a href="#">Categorias</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="contacto.html">Contacto</a>
         </div>
-    </div>
-
-    <!-- VISTAS DE DETALLE INDIVIDUALES PARA CADA JUEGO -->
-
-    <!-- Cyberpunk 2077 -->
-    <div id="view-cyberpunk-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1qqz.png" alt="Cyberpunk 2077">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • RPG</div>
-                <h2>Cyberpunk 2077</h2>
-                <p>es un RPG de acción en mundo abierto desarrollado por CD projekt RED Está ambientado en Night City</p>
-                <div class="game-detail-price">$59.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
+        <div class="footer-col">
+            <h3>Soporte</h3>
+            <a href="#">Centro de ayuda</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
         </div>
-    </div>
-
-    <!-- DOOM: The Dark Ages -->
-    <div id="view-doom-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8j9k.png" alt="DOOM: The Dark Ages">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • Shooter</div>
-                <h2>DOOM: The Dark Ages</h2>
-                <p>es un shooter en primera persona desarrollado por id Software y Bethesda Softworks</p>
-                <div class="game-detail-price">$69.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Kingdom Come: Deliverance II -->
-    <div id="view-kingdom-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7c1e.png" alt="Kingdom Come: Deliverance II">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Medieval • RPG</div>
-                <h2>Kingdom Come: Deliverance II</h2>
-                <p>histórico en mundo abierto que destaca por su realismo medieval.</p>
-                <div class="game-detail-price">$59.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Grand Theft Auto V -->
-    <div id="view-gta-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1vzz.png" alt="Grand Theft Auto V">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • Mundo Abierto</div>
-                <h2>Grand Theft Auto V</h2>
-                <p>es un videojuego de acción y mundo abierto desarrollado por Rockstar Games que permite a los jugadores explorar la vasta ciudad de Los Santos.</p>
-                <div class="game-detail-price">$29.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Minecraft Java -->
-    <div id="view-minecraft-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.png" alt="Minecraft Java">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Aventura • Mundo Abierto</div>
-                <h2>Minecraft Java</h2>
-                <p>es un juego de construcción y supervivencia de mundo abierto donde puedes dar rienda suelta a tu creatividad construyendo todo lo que imagines.</p>
-                <div class="game-detail-price">$19.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- EA Sports FC 25 -->
-    <div id="view-fc25-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7y52.png" alt="EA Sports FC 25">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Deportes • Simulación</div>
-                <h2>EA Sports FC 25</h2>
-                <p>es un simulador de fútbol de nueva generación desarrollado por EA Sports con licencias oficiales de equipos, ligas y jugadores de todo el mundo.</p>
-                <div class="game-detail-price">$59.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Valorant -->
-    <div id="view-valorant-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co49xa.png" alt="Valorant">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • Multijugador</div>
-                <h2>Valorant</h2>
-                <p>es un hero shooter táctico en primera persona desarrollado y publicado por Riot Games, enfocado en la precisión de disparo y habilidades únicas.</p>
-                <div class="game-detail-price" style="color: #48bb78 !important;">Gratis</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Black Myth: Wukong -->
-    <div id="view-wukong-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co6w89.png" alt="Black Myth: Wukong">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • RPG</div>
-                <h2>Black Myth: Wukong</h2>
-                <p>es un juego de rol y acción basado en la mitología china y la novela Viaje al Oeste, con combates intensos y gráficos espectaculares.</p>
-                <div class="game-detail-price">$59.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Clair Obscur: Expedition 33 -->
-    <div id="view-clair-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co7k5w.png" alt="Clair Obscur">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Fantasía • RPG</div>
-                <h2>Clair Obscur: Expedition 33</h2>
-                <p>es un RPG de fantasía por turnos con mecánicas en tiempo real, desarrollado con una dirección artística única y una historia cautivadora.</p>
-                <div class="game-detail-price">$49.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Elden Ring -->
-    <div id="view-elden-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co4jni.png" alt="Elden Ring">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • RPG</div>
-                <h2>Elden Ring</h2>
-                <p>es un aclamado RPG de acción en mundo abierto desarrollado por FromSoftware en colaboración con el autor George R. R. Martin.</p>
-                <div class="game-detail-price">$59.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Baldur's Gate 3 -->
-    <div id="view-baldur-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co67cn.png" alt="Baldur's Gate 3">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • Estrategias</div>
-                <h2>Baldur's Gate 3</h2>
-                <p>es un juego de rol de gran profundidad basado en las reglas de Dungeons & Dragons, desarrollado por Larian Studios con total libertad de elección.</p>
-                <div class="game-detail-price">$39.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Helldivers 2 -->
-    <div id="view-helldivers-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co64bl.png" alt="Helldivers 2">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • Cooperativo</div>
-                <h2>Helldivers 2</h2>
-                <p>es un shooter cooperativo en tercer persona donde equipos de jugadores luchan contra ejércitos alienígenas para defender la galaxia.</p>
-                <div class="game-detail-price">$49.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Forza Horizon 6 -->
-    <div id="view-forza-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co8vbc.png" alt="Forza Horizon 6">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Carreras</div>
-                <h2>Forza Horizon 6</h2>
-                <p>es un juego de carreras en mundo abierto con gráficos hiperrealistas, una enorme selección de vehículos y eventos dinámicos.</p>
-                <div class="game-detail-price">$59.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Red Dead Redemption 2 -->
-    <div id="view-rdr2-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co2q0g.png" alt="Red Dead Redemption 2">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • Mundo Abierto</div>
-                <h2>Red Dead Redemption 2</h2>
-                <p>es una épica aventura de vaqueros en el Salvaje Oeste desarrollada por Rockstar Games, con una historia profunda y un mundo detallado.</p>
-                <div class="game-detail-price">$19.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- The Witcher 3 -->
-    <div id="view-witcher-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.png" alt="The Witcher 3">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Acción • RPG</div>
-                <h2>The Witcher 3</h2>
-                <p>es un juego de rol de mundo abierto centrado en la historia, ambientado en un universo de fantasía oscura donde controlas al brujo Geralt de Rivia.</p>
-                <div class="game-detail-price">$9.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Resident Evil 4 -->
-    <div id="view-re4-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5vny.png" alt="Resident Evil 4">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Survival Horror • Acción</div>
-                <h2>Resident Evil 4</h2>
-                <p>es la reinvención moderna del clásico survival horror de Capcom, combinando acción intensa, terror y una narrativa absorbente.</p>
-                <div class="game-detail-price">$24.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- Hogwarts Legacy -->
-    <div id="view-hogwarts-detalle" class="page-view">
-        <div class="game-detail-container">
-            <div class="game-detail-img">
-                <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5upo.png" alt="Hogwarts Legacy">
-            </div>
-            <div class="game-detail-info">
-                <div class="game-detail-genre">Fantasía • RPG</div>
-                <h2>Hogwarts Legacy</h2>
-                <p>es un RPG de acción de mundo abierto ambientado en el universo de los libros de Harry Potter, donde puedes vivir tu propia aventura en Hogwarts.</p>
-                <div class="game-detail-price">$29.99</div>
-                <button class="btn-detail-buy" onclick="switchView('confirmacion')">Comprar</button>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="footer-content">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 15px;">
-                    <span>🎮</span> GameStore
-                </div>
-                <p style="color: #a0aec0; font-size: 0.9rem; line-height: 1.5;">Tu plataforma de confianza para adquirir los mejores videojuegos digitales al instante y al mejor precio.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Enlaces</h4>
-                <ul>
-                    <li><a onclick="switchView('inicio')">Inicio</a></li>
-                    <li><a onclick="switchView('catalogo')">Juegos</a></li>
-                    <li><a onclick="switchView('catalogo')">Categorías</a></li>
-                    <li><a onclick="switchView('ofertas')">Ofertas</a></li>
-                    <li><a onclick="switchView('contacto')">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Soporte</h4>
-                <ul>
-                    <li><a onclick="switchView('contacto')">Centro de ayuda</a></li>
-                    <li><a onclick="switchView('contacto')">Preguntas frecuentes</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Síguenos</h4>
-                <ul>
-                    <li><a href="#"><i class="fa-brands fa-facebook"></i> Facebook</a></li>
-                    <li><a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
-                    <li><a href="#"><i class="fa-brands fa-youtube"></i> YouTube</a></li>
-                    <li><a href="#"><i class="fa-brands fa-discord"></i> Discord</a></li>
-                </ul>
-            </div>
+        <div class="footer-col">
+            <h3>Síguenos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Discord</a>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script>
-        function switchView(viewId) {
-            const views = document.querySelectorAll('.page-view');
-            views.forEach(view => {
-                view.classList.remove('active-view');
-            });
-
-            const targetView = document.getElementById('view-' + viewId);
-            if (targetView) {
-                targetView.classList.add('active-view');
-                window.scrollTo(0, 0);
-            }
-        }
-    </script>
 </body>
 </html>

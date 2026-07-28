@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameStore - Contacto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. Barra de Navegación -->
+    <header class="navbar">
+        <div class="nav-logo">GameStore</div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Catálogo</a>
+            <a href="mas-vendidos.html">Mas vendidos</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+        <div class="nav-search">
+            <input type="text" placeholder="Buscar juegos, géneros o desarrolladores">
+        </div>
+        <div class="nav-actions">
+            <span class="cart-icon">🛒</span>
+            <button class="btn-login">Iniciar sesión</button>
+            <div class="nav-avatar">A</div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Contacto Decorado -->
+    <main class="catalogo-main" style="max-width: 600px; margin: 40px auto; padding: 20px;">
+        <h1 class="catalogo-title" style="text-align: center; margin-bottom: 10px;">📩 Contáctanos</h1>
+        <p style="text-align: center; color: #a0a0a0; margin-bottom: 30px;">¿Tienes dudas con un pedido o un juego? Escríbenos y te responderemos pronto.</p>
+        
+        <form style="display: flex; flex-direction: column; gap: 20px; background: rgba(255, 255, 255, 0.02); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="color: #fff; font-size: 14px;">Tu Nombre</label>
+                <input type="text" placeholder="Ej. Anderson López" style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #121216; color: #fff; outline: none;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="color: #fff; font-size: 14px;">Correo Electrónico</label>
+                <input type="email" placeholder="tucorreo@example.com" style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #121216; color: #fff; outline: none;">
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 8px;">
+                <label style="color: #fff; font-size: 14px;">Mensaje</label>
+                <textarea rows="4" placeholder="Escribe tu mensaje aquí..." style="padding: 12px; border-radius: 8px; border: 1px solid #333; background: #121216; color: #fff; outline: none; resize: none;"></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="padding: 12px; border-radius: 8px; border: none; cursor: pointer; font-weight: bold; margin-top: 10px;">Enviar Mensaje</button>
+        </form>
+    </main>
+
+    <!-- 4. Pie de Página (Footer) -->
+    <footer class="footer">
+        <div class="footer-col footer-brand">
+            <div class="footer-logo">GameStore</div>
+            <p>Explora los mejores videojuegos para PC, PlayStation y Xbox.</p>
+        </div>
+        <div class="footer-col">
+            <h3>Enlaces</h3>
+            <a href="index.html">Inicio</a>
+            <a href="catalogo.html">Juegos</a>
+            <a href="#">Categorias</a>
+            <a href="ofertas.html">Ofertas</a>
+            <a href="contacto.html">Contacto</a>
+        </div>
+        <div class="footer-col">
+            <h3>Soporte</h3>
+            <a href="#">Centro de ayuda</a>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Términos y condiciones</a>
+        </div>
+        <div class="footer-col">
+            <h3>Síguenos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+            <a href="#">Discord</a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

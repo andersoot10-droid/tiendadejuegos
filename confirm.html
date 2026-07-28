@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar Compra - GameStore</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .confirm-container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 0 40px;
+            flex: 1;
+            text-align: center;
+        }
+        .confirm-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .confirm-card {
+            background-color: #111827;
+            border: 1px solid #1f2937;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        .btn-confirm {
+            background-color: #10b981;
+            color: #ffffff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: background 0.3s;
+        }
+        .btn-confirm:hover {
+            background-color: #059669;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <span>🎮 GameStore</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="catalogo.html">Catalogo</a></li>
+                <li><a href="mas-vendidos.html">Mas vendidos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍 Buscar juegos, géneros o desarrolladores">
+        </div>
+    </header>
+
+    <main class="confirm-container">
+        <h1>Resumen de tu Orden</h1>
+        <div class="confirm-card">
+            <h3>Detalles del producto</h3>
+            <p style="color: #9ca3af; margin-top: 10px;">Estás a un paso de adquirir tu videojuego. Revisa que todo esté correcto antes de confirmar el pago.</p>
+        </div>
+        <a href="success.html" class="btn-confirm">Confirmar y Pagar</a>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo">🎮 GameStore</div>
+                <p style="color: #9ca3af; font-size: 0.85rem; margin-top: 10px;">Explora los mejores videojuegos<br>para PC, PlayStation y Xbox.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Juegos</a></li>
+                    <li><a href="mas-vendidos.html">Mas vendidos</a></li>
+                    <li><a href="ofertas.html">Ofertas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Soporte</h4>
+                <ul>
+                    <li><a href="#">Centro de ayuda</a></li>
+                    <li><a href="#">Preguntas frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Discord</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
