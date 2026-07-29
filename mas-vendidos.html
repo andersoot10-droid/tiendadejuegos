@@ -3,21 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore - Mas vendidos</title>
+    <title>GameStore - Más vendidos</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <!-- HEADER / NAVEGACIÓN -->
     <header class="navbar">
         <div class="nav-brand">
             <i class="fa-solid fa-gamepad"></i> GameStore
         </div>
         <nav class="nav-links">
             <a href="index.html">Inicio</a>
-            <a href="catalogo.html">Catalogo</a>
+            <a href="catalogo.html">Catálogo</a>
             <a href="mas-vendidos.html" class="active">Mas vendidos</a>
             <a href="ofertas.html">Ofertas</a>
             <a href="contacto.html">Contacto</a>
@@ -38,54 +35,66 @@
         </div>
     </header>
 
-    <!-- SECCIÓN MÁS VENDIDOS -->
-    <section class="section-container">
-        <div class="section-header">
-            <h2>⭐ Más Vendidos</h2>
-            <a href="catalogo.html" class="ver-todos">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
-        </div>
+    <section class="section-container" style="padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+        <h1 style="font-size: 2.5rem; margin-bottom: 30px; color: #fff;"><i class="fa-solid fa-star" style="margin-right: 10px; color: #eab308;"></i> Los Más Vendidos</h1>
         
-        <div class="grid-cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Elden Ring">
-                <div class="card-body">
-                    <h3>Elden Ring</h3>
-                    <p class="card-category">Acción • RPG</p>
-                    <p class="card-price">$59.99</p>
-                    <button class="btn-card">Comprar</button>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+            
+            <!-- Elden Ring -->
+            <div style="background: #1e1b4b; border-radius: 16px; overflow: hidden; border: 1px solid #312e81; padding: 15px; display: flex; flex-direction: column;">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Elden Ring" style="width: 100%; height: 130px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                <div style="display: flex; flex-direction: column; flex-grow: 1;">
+                    <h3 style="color: #fff; font-size: 1rem; margin-bottom: 4px; line-height: 1.3;">Elden Ring</h3>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin-bottom: 15px;">Acción • RPG</p>
+                    <p style="color: #c084fc; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px;">$59.99</p>
+                    <div style="margin-top: auto;">
+                        <a href="elden-ring.html" class="btn-card" style="display: block; text-align: center; background-color: #7c3aed; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Comprar</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Baldur's Gate 3">
-                <div class="card-body">
-                    <h3>Baldur's Gate 3</h3>
-                    <p class="card-category">Acción • Estrategia</p>
-                    <p class="card-price">$39.99</p>
-                    <button class="btn-card">Comprar</button>
+
+            <!-- Baldur's Gate 3 -->
+            <div style="background: #1e1b4b; border-radius: 16px; overflow: hidden; border: 1px solid #312e81; padding: 15px; display: flex; flex-direction: column;">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Baldur's Gate 3" style="width: 100%; height: 130px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                <div style="display: flex; flex-direction: column; flex-grow: 1;">
+                    <h3 style="color: #fff; font-size: 1rem; margin-bottom: 4px; line-height: 1.3;">Baldur's Gate 3</h3>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin-bottom: 15px;">Acción • Estrategias</p>
+                    <p style="color: #c084fc; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px;">$39.99</p>
+                    <div style="margin-top: auto;">
+                        <a href="baldurs-gate-3.html" class="btn-card" style="display: block; text-align: center; background-color: #7c3aed; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Comprar</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=400&q=80" alt="Helldivers 2">
-                <div class="card-body">
-                    <h3>Helldivers 2</h3>
-                    <p class="card-category">Acción • Cooperativa</p>
-                    <p class="card-price">$49.99</p>
-                    <button class="btn-card">Comprar</button>
+
+            <!-- Helldivers 2 -->
+            <div style="background: #1e1b4b; border-radius: 16px; overflow: hidden; border: 1px solid #312e81; padding: 15px; display: flex; flex-direction: column;">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Helldivers 2" style="width: 100%; height: 130px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                <div style="display: flex; flex-direction: column; flex-grow: 1;">
+                    <h3 style="color: #fff; font-size: 1rem; margin-bottom: 4px; line-height: 1.3;">Helldivers 2</h3>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin-bottom: 15px;">Acción • Cooperativo</p>
+                    <p style="color: #c084fc; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px;">$49.99</p>
+                    <div style="margin-top: auto;">
+                        <a href="helldivers-2.html" class="btn-card" style="display: block; text-align: center; background-color: #7c3aed; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Comprar</a>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Forza Horizon 6">
-                <div class="card-body">
-                    <h3>Forza Horizon 6</h3>
-                    <p class="card-category">Carreras</p>
-                    <p class="card-price">$59.99</p>
-                    <button class="btn-card">Comprar</button>
+
+            <!-- Forza Horizon 6 -->
+            <div style="background: #1e1b4b; border-radius: 16px; overflow: hidden; border: 1px solid #312e81; padding: 15px; display: flex; flex-direction: column;">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Forza Horizon 6" style="width: 100%; height: 130px; object-fit: cover; border-radius: 10px; margin-bottom: 15px;">
+                <div style="display: flex; flex-direction: column; flex-grow: 1;">
+                    <h3 style="color: #fff; font-size: 1rem; margin-bottom: 4px; line-height: 1.3;">Forza Horizon 6</h3>
+                    <p style="color: #94a3b8; font-size: 0.8rem; margin-bottom: 15px;">Carreras</p>
+                    <p style="color: #c084fc; font-weight: bold; font-size: 1.1rem; margin-bottom: 15px;">$59.99</p>
+                    <div style="margin-top: auto;">
+                        <a href="forza-horizon-6.html" class="btn-card" style="display: block; text-align: center; background-color: #7c3aed; color: white; padding: 10px; border-radius: 8px; text-decoration: none; font-weight: bold; font-size: 0.9rem;">Comprar</a>
+                    </div>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-col brand-col">
@@ -98,8 +107,8 @@
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Juegos</a></li>
-                    <li><a href="#">Categorías</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="mas-vendidos.html">Mas vendidos</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
@@ -128,6 +137,5 @@
             <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
 </html>

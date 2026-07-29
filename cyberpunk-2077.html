@@ -5,19 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameStore - Cyberpunk 2077</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <!-- HEADER / NAVEGACIÓN -->
     <header class="navbar">
         <div class="nav-brand">
             <i class="fa-solid fa-gamepad"></i> GameStore
         </div>
         <nav class="nav-links">
             <a href="index.html">Inicio</a>
-            <a href="catalogo.html">Catalogo</a>
+            <a href="catalogo.html">Catálogo</a>
             <a href="mas-vendidos.html">Mas vendidos</a>
             <a href="ofertas.html">Ofertas</a>
             <a href="contacto.html">Contacto</a>
@@ -38,24 +35,19 @@
         </div>
     </header>
 
-    <!-- DETALLE DEL JUEGO -->
-    <section class="section-container" style="padding: 40px 20px;">
-        <div class="game-detail-container" style="display: flex; gap: 40px; align-items: center; flex-wrap: wrap;">
-            <div class="game-detail-image" style="flex: 1; min-width: 300px;">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Cyberpunk 2077" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.5);">
-            </div>
-            <div class="game-detail-info" style="flex: 1; min-width: 300px; color: #fff;">
-                <h1 style="font-size: 2.5rem; margin-bottom: 20px;">Cyberpunk 2077</h1>
-                <p style="color: #cbd5e1; line-height: 1.6; margin-bottom: 30px; font-size: 1.1rem;">
-                    Cyberpunk 2077 es un RPG de acción en mundo abierto desarrollado por CD Projekt RED Está ambientado en Night City
-                </p>
-                <div style="font-size: 2.0rem; font-weight: bold; color: #a855f7; margin-bottom: 20px;">$59.99</div>
-                <button class="btn-primary" style="padding: 12px 30px; font-size: 1rem; background-color: #9333ea; color: #fff; border: none; border-radius: 8px; cursor: pointer;">Comprar</button>
-            </div>
+    <section class="section-container product-detail" style="display: flex; gap: 40px; align-items: center; padding: 60px 20px;">
+        <div class="product-image" style="flex: 1;">
+            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Cyberpunk 2077" style="width: 100%; border-radius: 12px;">
+        </div>
+        <div class="product-info" style="flex: 1;">
+            <p class="product-category" style="color: #a855f7; font-weight: bold; margin-bottom: 10px;">RPG • Mundo Abierto</p>
+            <h1 style="font-size: 2.5rem; margin-bottom: 20px; color: #fff;">Cyberpunk 2077</h1>
+            <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">Sumérgete en Night City, una megalópolis obsesionada con el poder, la elegancia y la modificación corporal.</p>
+            <p class="product-price" style="font-size: 2.2rem; font-weight: bold; color: #c084fc; margin-bottom: 25px;">$39.99</p>
+            <a href="confirmar-compra.html" class="btn-card" style="padding: 12px 30px; font-size: 1.1rem; background-color: #7c3aed; color: white; border: none; border-radius: 8px; cursor: pointer; display: inline-block; text-align: center; text-decoration: none;">Comprar</a>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-col brand-col">
@@ -68,8 +60,8 @@
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Juegos</a></li>
-                    <li><a href="#">Categorías</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="mas-vendidos.html">Mas vendidos</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
                 </ul>
@@ -98,6 +90,5 @@
             <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
         </div>
     </footer>
-
 </body>
 </html>
