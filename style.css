@@ -1,6 +1,4 @@
-/* ==========================================
-   1. CONFIGURACIÓN GENERAL
-   ========================================== */
+/* Estilos Generales y Reseteo */
 * {
     margin: 0;
     padding: 0;
@@ -9,349 +7,480 @@
 }
 
 body {
-    background-color: #0d1117;
+    background-color: #0b0f19;
     color: #ffffff;
+    overflow-x: hidden;
 }
 
-/* ==========================================
-   2. BARRA DE NAVEGACIÓN (NAVBAR)
-   ========================================== */
+/* NAVBAR */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
-    background-color: #0b0e14;
-    border-bottom: 1px solid #1f242d;
+    padding: 20px 50px;
+    background-color: #0b0f19;
+    border-bottom: 1px solid #1a2238;
 }
 
-.nav-logo {
-    font-size: 20px;
+.nav-brand {
+    font-size: 1.25rem;
     font-weight: bold;
-    color: #ffffff;
+    color: #fff;
     display: flex;
     align-items: center;
     gap: 8px;
+    font-style: italic;
+}
+
+.nav-brand i {
+    color: #8b5cf6;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #8b949e;
-    font-weight: 500;
-    font-size: 14px;
-    transition: color 0.2s;
+    color: #94a3b8;
+    font-size: 0.95rem;
+    transition: color 0.3s;
 }
 
 .nav-links a:hover, .nav-links a.active {
     color: #ffffff;
 }
 
-.nav-search input {
-    padding: 8px 16px;
-    border-radius: 6px;
-    border: 1px solid #1f242d;
-    background-color: #12161f;
-    color: #ffffff;
-    width: 280px;
-    font-size: 13px;
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-bar {
+    background-color: #151c2c;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+}
+
+.search-bar i {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.search-bar input {
+    background: transparent;
+    border: none;
+    color: #fff;
     outline: none;
+    font-size: 0.8rem;
+    width: 100%;
 }
 
-.nav-search input::placeholder {
-    color: #6b7280;
+.search-bar input::placeholder {
+    color: #64748b;
 }
 
-.nav-search input:focus {
-    border-color: #58a6ff;
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    color: #cbd5e1;
+    font-size: 1.1rem;
 }
 
-/* ==========================================
-   3. CONTENEDOR PRINCIPAL Y SECCIONES
-   ========================================== */
-main {
-    padding: 40px;
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #8b5cf6;
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 5px;
+    border-radius: 50%;
 }
 
-.game-section {
-    margin-bottom: 40px;
+.btn-login {
+    background-color: transparent;
+    border: 1px solid #334155;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+}
+
+.btn-login:hover {
+    background-color: #1e293b;
+}
+
+.user-avatar {
+    background-color: #8b5cf6;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 0.85rem;
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 50px;
+    background: linear-gradient(180deg, #0b0f19 0%, #111827 100%);
+}
+
+.hero-content {
+    max-width: 500px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    color: #94a3b8;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-primary {
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #7c3aed;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid #334155;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #1e293b;
+}
+
+.hero-image img {
+    width: 550px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* SECCIONES Y TARJETAS */
+.section-container {
+    padding: 40px 50px;
 }
 
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .section-header h2 {
-    font-size: 22px;
+    font-size: 1.4rem;
+    color: #ffffff;
 }
 
-.view-all {
-    color: #58a6ff;
+.ver-todos {
+    color: #8b5cf6;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
-.game-grid {
+.grid-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 }
 
-.game-card {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 8px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s;
-}
-
-.game-card:hover {
-    transform: translateY(-4px);
-}
-
-/* ==========================================
-   4. ESPACIO DELIMITADO PARA IMÁGENES
-   ========================================== */
-.game-img {
-    width: 100%;
-    height: 140px;
-    background-color: #21262d;
-    border: 1px dashed #484f58;
-    border-radius: 6px;
-    margin-bottom: 12px;
+.card {
+    background-color: #131b2e;
+    border-radius: 12px;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+    border: 1px solid #1e293b;
+    transition: transform 0.3s;
 }
 
-/* Mensaje visual que se muestra si la imagen aún no existe o falla al cargar */
-.game-img::before {
-    content: "🖼️ Espacio Imagen";
-    color: #8b949e;
-    font-size: 12px;
-    font-weight: 500;
-    position: absolute;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-.game-img img {
+.card img {
     width: 100%;
-    height: 100%;
+    height: 170px;
     object-fit: cover;
-    display: block;
-    position: relative;
-    z-index: 1;
 }
 
-.game-info {
-    margin-bottom: 15px;
+.card-body {
+    padding: 15px;
 }
 
-.game-title {
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 5px;
+.card-body h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #fff;
 }
 
-.game-category {
-    font-size: 12px;
-    color: #8b949e;
-    display: block;
-    margin-bottom: 8px;
+.card-category {
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-bottom: 12px;
 }
 
-.game-price {
-    font-size: 15px;
-    font-weight: bold;
-    color: #3fb950;
-}
-
-/* ==========================================
-   5. BOTONES DE COMPRA Y ACCIONES
-   ========================================== */
-.btn-buy, a.btn-buy {
-    background-color: #8957e5;
+.card-price {
     color: #ffffff;
+    font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.card-price.free {
+    color: #10b981;
+}
+
+.card-price.offer {
+    color: #a78bfa;
+}
+
+.old-price {
+    color: #64748b;
+    font-size: 0.75rem;
+    text-decoration: line-through;
+    margin-bottom: 2px;
+}
+
+.btn-card {
+    width: 100%;
+    background-color: #8b5cf6;
+    color: white;
     border: none;
     padding: 8px;
     border-radius: 6px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    font-weight: 600;
     cursor: pointer;
-    width: 100%;
-    box-sizing: border-box;
-    transition: background-color 0.2s;
+    transition: background 0.3s;
 }
 
-.btn-buy:hover, a.btn-buy:hover {
-    background-color: #794bc4;
+.btn-card:hover {
+    background-color: #7c3aed;
 }
 
-/* ==========================================
-   6. VISTAS DETALLE DE JUEGO, CONFIRMACIÓN Y ÉXITO
-   ========================================== */
-.game-detail-card, .confirmation-box, .success-box {
-    max-width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.game-image-container {
-    width: 100%;
-    height: 220px;
-    background-color: #21262d;
-    border: 1px dashed #484f58;
-    border-radius: 8px;
-    overflow: hidden;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-
-.game-image-container::before {
-    content: "🖼️ Imagen del Juego";
-    color: #8b949e;
-    font-size: 14px;
-    font-weight: 500;
-    position: absolute;
-}
-
-.detail-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: relative;
-    z-index: 1;
-}
-
-.game-detail-info h1 {
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.game-detail-info .category {
-    font-size: 14px;
-    color: #8b949e;
-    margin-bottom: 12px;
-}
-
-.game-detail-info .description {
-    font-size: 14px;
-    color: #c9d1d9;
-    margin-bottom: 20px;
-    line-height: 1.5;
-}
-
-.game-detail-info .price {
-    font-size: 22px;
-    font-weight: bold;
-    color: #3fb950;
-    margin-bottom: 20px;
-}
-
-.button-group {
-    display: flex;
-    gap: 15px;
-    justify-content: center;
-}
-
-.btn-danger {
-    background-color: #21262d;
-    color: #f85149;
-    border: 1px solid #30363d;
-    padding: 10px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.2s;
-}
-
-.btn-danger:hover {
-    background-color: #30363d;
-}
-
-.icon-check {
-    width: 60px;
-    height: 60px;
-    background-color: #238636;
-    color: #ffffff;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 28px;
-    margin: 0 auto 20px auto;
-}
-
-/* ==========================================
-   7. PIE DE PÁGINA (FOOTER)
-   ========================================== */
+/* FOOTER */
 .footer {
+    background-color: #070a12;
+    padding: 60px 50px 20px 50px;
+    margin-top: 50px;
+    border-top: 1px solid #1a2238;
+}
+
+.footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     gap: 40px;
-    background-color: #161b22;
-    padding: 40px;
-    border-top: 1px solid #30363d;
-    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
-.footer-logo {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.footer-col p {
-    color: #8b949e;
-    font-size: 14px;
+.brand-col p {
+    color: #64748b;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    line-height: 1.4;
+    max-width: 250px;
 }
 
 .footer-col h3 {
-    font-size: 16px;
+    font-size: 1rem;
+    color: #fff;
     margin-bottom: 15px;
 }
 
-.footer-col a {
-    display: block;
-    color: #8b949e;
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: #64748b;
     text-decoration: none;
-    margin-bottom: 8px;
-    font-size: 14px;
+    font-size: 0.85rem;
+    transition: color 0.3s;
 }
 
-.footer-col a:hover {
-    color: #58a6ff;
+.footer-col ul li a:hover {
+    color: #fff;
 }
 
-.footer-bottom {
-    grid-column: 1 / -1;
+.social-links li a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-bottom hr {
+    border: none;
+    border-top: 1px solid #1a2238;
+    margin-bottom: 20px;
+}
+
+.footer-bottom p {
     text-align: center;
-    color: #8b949e;
-    font-size: 13px;
-    border-top: 1px solid #30363d;
-    padding-top: 20px;
-    margin-top: 20px;
+    color: #64748b;
+    font-size: 0.8rem;
+}
+
+/* RESPONSIVE PARA DISPOSITIVOS MÓVILES */
+@media (max-width: 1024px) {
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+    .nav-links {
+        display: none;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
+    }
+    .hero-image img {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .grid-cards {
+        grid-template-columns: 1fr;
+    }
+    .section-container {
+        padding: 20px;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+}/* --- ESTILOS CORREGIDOS PARA LA TARJETA --- */
+
+/* Ajustes en el contenedor principal de la tarjeta */
+.card {
+    position: relative; /* Necesario para el posicionamiento absoluto del cuerpo */
+    overflow: hidden;    /* Asegura que nada se salga de las esquinas redondeadas */
+    background-color: #131b2e; /* Color de fondo por defecto, aunque la imagen lo cubrirá */
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Para asegurar que todas las tarjetas tengan la misma altura si se estiran */
+}
+
+/* Ajustes en la imagen de fondo */
+.card img {
+    width: 100%;
+    height: 180px; /* Ajusta la altura de la imagen aquí (ejemplo: 180px) */
+    object-fit: cover; /* Hace que la imagen cubra todo el espacio sin estirarse */
+    display: block; /* Elimina espacios en blanco debajo de la imagen */
+    /* border-radius: 12px 12px 0 0; /* Opcional: Solo esquinas superiores */
+}
+
+/* Ajustes en el cuerpo de la tarjeta (texto y botón) */
+.card-body {
+    padding: 15px;
+    background-color: #131b2e; /* Mismo color de fondo que la tarjeta */
+    position: relative; /* Para poder superponerlo */
+    margin-top: -30px; /* Superpone el texto sobre la imagen (ajusta este valor si cambias la altura de la imagen) */
+    border-radius: 12px 12px 0 0; /* Esquinas superiores redondeadas para el cuerpo */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Empuja el botón hacia abajo */
+}
+
+/* El resto de tus estilos para h3, p, btn-card permanecen igual */
+.card-body h3 {
+    font-size: 1.1rem; /* Un poco más grande para mayor impacto */
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.card-category {
+    color: #94a3b8; /* Un gris más claro para mejor contraste */
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+}
+
+.card-price {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.btn-card {
+    width: 100%;
+    background-color: #8b5cf6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: auto; /* Asegura que el botón siempre esté al fondo */
+}
+
+.btn-card:hover {
+    background-color: #7c3aed;
 }
