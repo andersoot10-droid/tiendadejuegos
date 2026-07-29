@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameStore</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome para los iconos de redes sociales -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <!-- HEADER / NAVEGACIÓN -->
     <header class="navbar">
         <div class="nav-brand">
             <i class="fa-solid fa-gamepad"></i> GameStore
@@ -38,14 +36,13 @@
         </div>
     </header>
 
-    <!-- SECCIÓN HERO -->
     <section class="hero" id="inicio">
         <div class="hero-content">
             <h1>Cyberpunk 2077</h1>
             <p>Explora Night City, una ciudad futurista llena de acción, tecnología y aventuras.</p>
             <div class="hero-buttons">
-                <button class="btn-primary">Comprar ahora</button>
-                <button class="btn-secondary">Ver más</button>
+                <a href="cyberpunk-2077.html" class="btn-primary" style="text-decoration: none; display: inline-block; text-align: center; line-height: normal;">Comprar ahora</a>
+                <a href="cyberpunk-2077.html" class="btn-secondary" style="display: inline-block; text-align: center; text-decoration: none; line-height: normal;">Ver más</a>
             </div>
         </div>
         <div class="hero-image">
@@ -53,57 +50,51 @@
         </div>
     </section>
 
-    <!-- JUEGOS POPULARES -->
     <section class="section-container">
         <div class="section-header">
             <h2>🔥 Juegos Populares</h2>
             <a href="catalogo.html" class="ver-todos">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
         </div>
         <div class="grid-cards">
-            <!-- Card 1 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80" alt="GTA V">
                 <div class="card-body">
                     <h3>Grand Theft Auto V</h3>
                     <p class="card-category">Acción • Mundo Abierto</p>
                     <p class="card-price">$29.99</p>
-                    <button class="btn-card">Comprar</button>
+                    <a href="gta-v.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
-            <!-- Card 2 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1627856013091-feddeab4336aa?auto=format&fit=crop&w=400&q=80" alt="Minecraft">
                 <div class="card-body">
                     <h3>Minecraft Java</h3>
                     <p class="card-category">Aventura • Mundo Abierto</p>
                     <p class="card-price">$19.99</p>
-                    <button class="btn-card">Comprar</button>
+                    <a href="minecraft-java.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
-            <!-- Card 3 -->
             <div class="card">
                 <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="EA Sports FC 25">
                 <div class="card-body">
                     <h3>EA Sports FC 25</h3>
                     <p class="card-category">Deportes • Simulación</p>
                     <p class="card-price">$59.99</p>
-                    <button class="btn-card">Comprar</button>
+                    <a href="ea-sports-fc-25.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
-            <!-- Card 4 -->
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=400&q=80" alt="Valorant">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="Cyberpunk 2077">
                 <div class="card-body">
-                    <h3>Valorant</h3>
-                    <p class="card-category">Acción • Multijugador</p>
-                    <p class="card-price free">Gratis</p>
-                    <button class="btn-card">Comprar</button>
+                    <h3>Cyberpunk 2077</h3>
+                    <p class="card-category">RPG • Acción</p>
+                    <p class="card-price">$59.99</p>
+                    <a href="cyberpunk-2077.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- NUEVOS LANZAMIENTOS -->
     <section class="section-container">
         <div class="section-header">
             <h2>🆕 Nuevos Lanzamientos</h2>
@@ -149,7 +140,6 @@
         </div>
     </section>
 
-    <!-- OFERTAS -->
     <section class="section-container" id="ofertas">
         <div class="section-header">
             <h2>⚡ Ofertas</h2>
@@ -195,7 +185,6 @@
         </div>
     </section>
 
-    <!-- MÁS VENDIDOS -->
     <section class="section-container" id="mas-vendidos">
         <div class="section-header">
             <h2>⭐ Más Vendidos</h2>
@@ -241,7 +230,6 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer" id="contacto">
         <div class="footer-content">
             <div class="footer-col brand-col">
@@ -254,7 +242,7 @@
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Juegos</a></li>
+                    <li><a href="catalogo.html">Catalogo</a></li>
                     <li><a href="mas-vendidos.html">Mas vendidos</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
