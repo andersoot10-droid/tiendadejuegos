@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore - Catalogo</title>
+    <title>GameStore - Catálogo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -15,7 +15,7 @@
         </div>
         <nav class="nav-links">
             <a href="index.html">Inicio</a>
-            <a href="catalogo.html" class="active">Catalogo</a>
+            <a href="catalogo.html" class="active">Catálogo</a>
             <a href="mas-vendidos.html">Mas vendidos</a>
             <a href="ofertas.html">Ofertas</a>
             <a href="contacto.html">Contacto</a>
@@ -38,45 +38,68 @@
 
     <section class="section-container catalog-page">
         <div class="catalog-title-container">
-            <h1 class="catalog-main-title">Catalogo</h1>
+            <h1 class="catalog-main-title">Catálogo</h1>
         </div>
 
-        <!-- Fila 1 -->
+        <!-- Fila 1 unificada con el mismo diseño y botón Comprar -->
         <div class="grid-cards">
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80" alt="GTA V">
-                <div class="card-body">
-                    <h3>Grand Theft Auto V</h3>
-                    <p class="card-category">Acción • Mundo Abierto</p>
-                    <p class="card-price">$29.99</p>
-                    <a href="gta-v.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
+            <!-- GTA V -->
+            <div class="game-card" style="background-color: #131722; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px;">
+                    <img src="https://image.api.playstation.com/cdn/UP1004/CUSA00419_00/bTNSe7ok8eFVGeQByA5qSzBQoKAAY32R.png" alt="Grand Theft Auto V" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 5px;">Grand Theft Auto V</h3>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 10px;">Acción • Mundo Abierto</p>
+                    <span style="color: #c084fc; font-size: 1.6rem; font-weight: bold;">$29.99</span>
+                </div>
+                <div>
+                    <a href="gta-v.html" class="btn-primary" style="text-decoration: none; display: block; text-align: center; padding: 12px 20px; background-color: #7c3aed; color: #fff; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">Comprar</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1627856013091-feddeab4336aa?auto=format&fit=crop&w=400&q=80" alt="Minecraft">
-                <div class="card-body">
-                    <h3>Minecraft Java</h3>
-                    <p class="card-category">Aventura • Mundo Abierto</p>
-                    <p class="card-price">$19.99</p>
-                    <a href="minecraft-java.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
+
+            <!-- Minecraft Java -->
+            <div class="game-card" style="background-color: #131722; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px;">
+                    <img src="https://wallpapers.com/images/hd/minecraft-background-cfljc4haleghnajo.jpg" alt="Minecraft Java" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 5px;">Minecraft Java</h3>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 10px;">Aventura • Mundo Abierto</p>
+                    <span style="color: #c084fc; font-size: 1.6rem; font-weight: bold;">$19.99</span>
+                </div>
+                <div>
+                    <a href="minecraft-java.html" class="btn-primary" style="text-decoration: none; display: block; text-align: center; padding: 12px 20px; background-color: #7c3aed; color: #fff; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">Comprar</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="EA Sports FC 25">
-                <div class="card-body">
-                    <h3>EA Sports FC 25</h3>
-                    <p class="card-category">Deportes • Simulación</p>
-                    <p class="card-price">$59.99</p>
-                    <a href="ea-sports-fc-25.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
+
+            <!-- EA Sports FC 25 -->
+            <div class="game-card" style="background-color: #131722; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px;">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.bSJjTLlyCdX8JFlEIg-FIQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="EA Sports FC 25" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 5px;">EA Sports FC 25</h3>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 10px;">Deportes • Simulación</p>
+                    <span style="color: #c084fc; font-size: 1.6rem; font-weight: bold;">$59.99</span>
+                </div>
+                <div>
+                    <a href="ea-sports-fc-25.html" class="btn-primary" style="text-decoration: none; display: block; text-align: center; padding: 12px 20px; background-color: #7c3aed; color: #fff; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">Comprar</a>
                 </div>
             </div>
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="Cyberpunk 2077">
-                <div class="card-body">
-                    <h3>Cyberpunk 2077</h3>
-                    <p class="card-category">RPG • Acción</p>
-                    <p class="card-price">$59.99</p>
-                    <a href="cyberpunk-2077.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
+
+            <!-- God of War Ragnarök -->
+            <div class="game-card" style="background-color: #131722; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.5); padding: 15px; display: flex; flex-direction: column; justify-content: space-between;">
+                <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 15px;">
+                    <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2322010/capsule_616x353.jpg?t=1776465233" alt="God of War Ragnarök" style="width: 100%; height: 200px; object-fit: cover; display: block;">
+                </div>
+                <div style="margin-bottom: 15px;">
+                    <h3 style="color: #fff; font-size: 1.4rem; margin-bottom: 5px;">God of War Ragnarök</h3>
+                    <p style="color: #94a3b8; font-size: 0.95rem; margin-bottom: 10px;">Acción • Aventura</p>
+                    <span style="color: #c084fc; font-size: 1.6rem; font-weight: bold;">$49.99</span>
+                </div>
+                <div>
+                    <a href="god-of-war.html" class="btn-primary" style="text-decoration: none; display: block; text-align: center; padding: 12px 20px; background-color: #7c3aed; color: #fff; border-radius: 8px; font-weight: bold; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);">Comprar</a>
                 </div>
             </div>
         </div>
@@ -84,16 +107,16 @@
         <!-- Fila 2 -->
         <div class="grid-cards" style="margin-top: 25px;">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80" alt="Black Myth">
+                <img src="https://th.bing.com/th/id/OIP.rc7vgjAsFmAgshbKCdLBMQHaEK?w=301&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Black Myth: Wukong" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Black Myth: Wukong</h3>
                     <p class="card-category">Acción • RPG</p>
                     <p class="card-price">$59.99</p>
-                    <a href="black-myth-wukong.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
+                    <a href="wukong.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=400&q=80" alt="Expedition 33">
+                <img src="https://wallpapercave.com/wp/wp15315845.jpg" alt="Clair Obscur Expedition 33" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Clair Obscur: Expedition 33</h3>
                     <p class="card-category">Fantasía • RPG</p>
@@ -102,7 +125,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=400&q=80" alt="DOOM">
+                <img src="https://gaming-cdn.com/images/products/16798/616x353/doom-the-dark-ages-pc-game-steam-cover.jpg?v=1737717672" alt="DOOM: The Dark Ages" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>DOOM: The Dark Ages</h3>
                     <p class="card-category">Acción • Shooter</p>
@@ -111,7 +134,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=400&q=80" alt="Kingdom Come">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202408/1208/05a84ce968125d79fa36484c5a756a1c8d9b05622aae21c1.png" referrerpolicy="no-referrer" alt="Kingdom Come: Deliverance II" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Kingdom Come: Deliverance II</h3>
                     <p class="card-category">Medieval • RPG</p>
@@ -121,10 +144,10 @@
             </div>
         </div>
 
-        <!-- Fila 3 (Ofertas) -->
+        <!-- Fila 3 (Ofertas con RDR2 actualizado) -->
         <div class="grid-cards" style="margin-top: 25px;">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="RDR2">
+                <img src="https://i1.sndcdn.com/artworks-000466512579-cp7kvl-t500x500.jpg" alt="Red Dead Redemption 2" style="width: 100%; height: 180px; object-fit: cover; object-position: center 30%;">
                 <div class="card-body">
                     <h3>Red Dead Redemption 2</h3>
                     <p class="old-price">Precio Original $59.99</p>
@@ -133,7 +156,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" alt="The Witcher 3">
+                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" alt="The Witcher 3" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>The Witcher 3</h3>
                     <p class="old-price">Precio Original $39.99</p>
@@ -142,7 +165,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=400&q=80" alt="Resident Evil 4">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=400&q=80" alt="Resident Evil 4" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Resident Evil 4</h3>
                     <p class="old-price">Precio Original $49.99</p>
@@ -151,7 +174,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80" alt="Hogwarts Legacy">
+                <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80" alt="Hogwarts Legacy" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Hogwarts Legacy</h3>
                     <p class="old-price">Precio Original $59.99</p>
@@ -164,7 +187,7 @@
         <!-- Fila 4 (Más Vendidos) -->
         <div class="grid-cards" style="margin-top: 25px;">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Elden Ring">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Elden Ring" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Elden Ring</h3>
                     <p class="card-category">Acción • RPG</p>
@@ -173,7 +196,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Baldur's Gate 3">
+                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Baldur's Gate 3" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Baldur's Gate 3</h3>
                     <p class="card-category">Acción • Estrategia</p>
@@ -182,7 +205,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=400&q=80" alt="Helldivers 2">
+                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=400&q=80" alt="Helldivers 2" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Helldivers 2</h3>
                     <p class="card-category">Acción • Cooperativa</p>
@@ -191,7 +214,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Forza Horizon 6">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Forza Horizon 6" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Forza Horizon 6</h3>
                     <p class="card-category">Carreras</p>
@@ -214,7 +237,7 @@
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
                     <li><a href="mas-vendidos.html">Mas vendidos</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
                     <li><a href="contacto.html">Contacto</a></li>

@@ -237,6 +237,9 @@ body {
     overflow: hidden;
     border: 1px solid #1e293b;
     transition: transform 0.3s;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .card:hover {
@@ -245,31 +248,37 @@ body {
 
 .card img {
     width: 100%;
-    height: 170px;
+    height: 180px;
     object-fit: cover;
+    display: block;
+    border-radius: 12px 12px 0 0;
 }
 
 .card-body {
     padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .card-body h3 {
-    font-size: 1rem;
-    margin-bottom: 6px;
+    font-size: 1.1rem;
+    margin-bottom: 4px;
     color: #fff;
 }
 
 .card-category {
-    color: #64748b;
-    font-size: 0.75rem;
-    margin-bottom: 12px;
+    color: #94a3b8;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
 }
 
 .card-price {
     color: #ffffff;
     font-weight: bold;
-    font-size: 0.95rem;
-    margin-bottom: 12px;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
 }
 
 .card-price.free {
@@ -292,11 +301,12 @@ body {
     background-color: #8b5cf6;
     color: white;
     border: none;
-    padding: 8px;
+    padding: 10px;
     border-radius: 6px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s;
+    margin-top: auto;
 }
 
 .btn-card:hover {
@@ -369,6 +379,112 @@ body {
     font-size: 0.8rem;
 }
 
+.catalog-title-container {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.catalog-main-title {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* --- ESTILOS NUEVOS PARA EL FLUJO DE COMPRA Y MODALES --- */
+.view-section {
+    display: none;
+}
+
+.view-section.active {
+    display: flex;
+}
+
+.purchase-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(11, 15, 25, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.purchase-box {
+    background-color: #131b2e;
+    border: 2px solid #8b5cf6;
+    border-radius: 12px;
+    padding: 40px;
+    text-align: center;
+    max-width: 450px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.purchase-box h2 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.purchase-box p {
+    color: #94a3b8;
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+}
+
+.modal-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 12px;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s;
+}
+
+.btn-purple {
+    background-color: #8b5cf6;
+    color: #fff;
+}
+
+.btn-purple:hover {
+    background-color: #7c3aed;
+}
+
+.btn-gray {
+    background-color: #334155;
+    color: #fff;
+}
+
+.btn-gray:hover {
+    background-color: #1e293b;
+}
+
+.success-icon-box {
+    background-color: #1e293b;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.success-icon-box i {
+    color: #8b5cf6;
+    font-size: 2.2rem;
+}
+
 /* RESPONSIVE PARA DISPOSITIVOS MÓVILES */
 @media (max-width: 1024px) {
     .grid-cards {
@@ -410,87 +526,4 @@ body {
         grid-template-columns: 1fr;
         gap: 30px;
     }
-}/* --- ESTILOS CORREGIDOS PARA LA TARJETA --- */
-
-/* Ajustes en el contenedor principal de la tarjeta */
-.card {
-    position: relative; /* Necesario para el posicionamiento absoluto del cuerpo */
-    overflow: hidden;    /* Asegura que nada se salga de las esquinas redondeadas */
-    background-color: #131b2e; /* Color de fondo por defecto, aunque la imagen lo cubrirá */
-    border-radius: 12px;
-    border: 1px solid #1e293b;
-    transition: transform 0.3s;
-    display: flex;
-    flex-direction: column;
-    height: 100%; /* Para asegurar que todas las tarjetas tengan la misma altura si se estiran */
-}
-
-/* Ajustes en la imagen de fondo */
-.card img {
-    width: 100%;
-    height: 180px; /* Ajusta la altura de la imagen aquí (ejemplo: 180px) */
-    object-fit: cover; /* Hace que la imagen cubra todo el espacio sin estirarse */
-    display: block; /* Elimina espacios en blanco debajo de la imagen */
-    /* border-radius: 12px 12px 0 0; /* Opcional: Solo esquinas superiores */
-}
-
-/* Ajustes en el cuerpo de la tarjeta (texto y botón) */
-.card-body {
-    padding: 15px;
-    background-color: #131b2e; /* Mismo color de fondo que la tarjeta */
-    position: relative; /* Para poder superponerlo */
-    margin-top: -30px; /* Superpone el texto sobre la imagen (ajusta este valor si cambias la altura de la imagen) */
-    border-radius: 12px 12px 0 0; /* Esquinas superiores redondeadas para el cuerpo */
-    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
-    flex-grow: 1; /* Permite que el cuerpo ocupe el espacio restante */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Empuja el botón hacia abajo */
-}
-
-/* El resto de tus estilos para h3, p, btn-card permanecen igual */
-.card-body h3 {
-    font-size: 1.1rem; /* Un poco más grande para mayor impacto */
-    margin-bottom: 4px;
-    color: #fff;
-}
-
-.card-category {
-    color: #94a3b8; /* Un gris más claro para mejor contraste */
-    font-size: 0.8rem;
-    margin-bottom: 10px;
-}
-
-.card-price {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-}
-
-.btn-card {
-    width: 100%;
-    background-color: #8b5cf6;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: auto; /* Asegura que el botón siempre esté al fondo */
-}
-
-.btn-card:hover {
-    background-color: #7c3aed;
-}/* Estilo para el título de la página de Catálogo */
-.catalog-title-container {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.catalog-main-title {
-    font-size: 2.2rem;
-    color: #ffffff;
-    font-weight: 600;
 }

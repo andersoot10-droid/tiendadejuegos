@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameStore - Expedition 33</title>
+    <title>God of War Ragnarök - GameStore</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-brand">
             <i class="fa-solid fa-gamepad"></i> GameStore
@@ -35,20 +37,30 @@
         </div>
     </header>
 
-    <section class="section-container product-detail" style="display: flex; gap: 40px; align-items: center; padding: 60px 20px;">
-        <div class="product-image" style="flex: 1;">
-            <img src="https://wallpapercave.com/wp/wp15315845.jpg" alt="Expedition 33" style="width: 100%; border-radius: 12px;">
+    <!-- DETALLE DEL JUEGO -->
+    <section class="hero" style="display: flex; align-items: center; justify-content: space-between; padding: 60px 8%; gap: 50px;">
+        <!-- IMAGEN A LA IZQUIERDA -->
+        <div class="hero-image" style="flex: 1; display: flex; justify-content: flex-start;">
+            <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2322010/capsule_616x353.jpg?t=1776465233" alt="God of War Ragnarök" style="width: 100%; max-width: 550px; height: 350px; border-radius: 16px; object-fit: cover; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         </div>
-        <div class="product-info" style="flex: 1;">
-            <p class="product-category" style="color: #a855f7; font-weight: bold; margin-bottom: 10px;">RPG • Fantasía</p>
-            <h1 style="font-size: 2.5rem; margin-bottom: 20px; color: #fff;">Expedition 33</h1>
-            <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 30px; line-height: 1.6;">Únete a la expedición para destruir a la Pintora antes de que pinte el número de la muerte sobre la humanidad.</p>
-            <p class="product-price" style="font-size: 2.2rem; font-weight: bold; color: #c084fc; margin-bottom: 25px;">$49.99</p>
-            <a href="confirmar-compra.html" class="btn-card" style="padding: 12px 30px; font-size: 1.1rem; background-color: #7c3aed; color: white; border: none; border-radius: 8px; cursor: pointer; display: inline-block; text-align: center; text-decoration: none;">Comprar</a>
+
+        <!-- CONTENIDO A LA DERECHA -->
+        <div class="hero-content" style="flex: 1; position: relative; z-index: 5;">
+            <p style="color: #a855f7; font-size: 1rem; font-weight: bold; margin-bottom: 10px;">Acción • Aventura</p>
+            <h1 style="font-size: 3rem; margin-bottom: 20px; color: #fff;">God of War Ragnarök</h1>
+            <p style="color: #cbd5e1; font-size: 1.05rem; margin-bottom: 25px; line-height: 1.6;">Embárcate en un viaje mítico y emotivo junto a Kratos y Atreus mientras buscan respuestas antes de la llegada del Ragnarök. Juntos, padre e hijo deben arriesgarlo todo mientras exploran los Nueve Reinos.</p>
+            <div style="margin-bottom: 25px;">
+                <span style="color: #c084fc; font-size: 2.2rem; font-weight: bold;">$49.99</span>
+            </div>
+            <div>
+
+                 <a href="confirmar-compra.html" class="btn-card" style="padding: 12px 30px; font-size: 1.1rem; background-color: #7c3aed; color: white; border: none; border-radius: 8px; cursor: pointer; display: inline-block; text-align: center; text-decoration: none;">Comprar</a>
         </div>
+            </div>
     </section>
 
-    <footer class="footer">
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer" id="contacto">
         <div class="footer-content">
             <div class="footer-col brand-col">
                 <div class="nav-brand">
@@ -60,7 +72,7 @@
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
                     <li><a href="mas-vendidos.html">Mas vendidos</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -90,5 +102,6 @@
             <p>&copy; 2026 GameStore. Todos los derechos reservados.</p>
         </div>
     </footer>
+
 </body>
 </html>

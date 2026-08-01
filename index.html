@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <header class="navbar">
         <div class="nav-brand">
             <i class="fa-solid fa-gamepad"></i> GameStore
@@ -36,20 +37,22 @@
         </div>
     </header>
 
-    <section class="hero" id="inicio">
-        <div class="hero-content">
-            <h1>Cyberpunk 2077</h1>
-            <p>Explora Night City, una ciudad futurista llena de acción, tecnología y aventuras. </p>
-            <div class="hero-buttons">
-                <a href="cyberpunk-2077.html" class="btn-primary" style="text-decoration: none; display: inline-block; text-align: center; line-height: normal;">Comprar ahora</a>
-                <a href="cyberpunk-2077.html" class="btn-secondary" style="display: inline-block; text-align: center; text-decoration: none; line-height: normal;">Ver más</a>
+    <!-- HERO (Cyberpunk 2077) -->
+    <section class="hero" id="inicio" style="display: flex; align-items: center; justify-content: space-between; padding: 60px 8%; gap: 50px;">
+        <div class="hero-content" style="flex: 1; position: relative; z-index: 5;">
+            <h1 style="font-size: 3rem; margin-bottom: 20px; color: #fff;">Cyberpunk 2077</h1>
+            <p style="color: #cbd5e1; font-size: 1.15rem; margin-bottom: 30px; line-height: 1.6;">Sumérgete in Night City, una megalópolis obsesionada con el poder, el glamour y la modificación corporal.</p>
+            <div class="hero-buttons" style="display: flex; gap: 15px;">
+                <a href="cyberpunk-2077.html" class="btn-primary" style="text-decoration: none; display: inline-block; text-align: center; padding: 12px 30px; background-color: #7c3aed; color: #fff; border-radius: 8px; font-weight: bold; cursor: pointer; position: relative; z-index: 10;">Comprar ahora</a>
+                <a href="cyberpunk-2077.html" class="btn-secondary" style="display: inline-block; text-align: center; text-decoration: none; padding: 12px 30px; background: transparent; border: 1px solid #3b82f6; color: #fff; border-radius: 8px; cursor: pointer; position: relative; z-index: 10;">Ver más</a>
             </div>
         </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Cyberpunk 2077">
+        <div class="hero-image" style="flex: 1; display: flex; justify-content: flex-end;">
+            <img src="https://wallpapercave.com/wp/wp10619695.jpg" alt="Cyberpunk 2077" style="width: 100%; max-width: 600px; height: 380px; border-radius: 16px; object-fit: cover; display: block; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
         </div>
     </section>
 
+    <!-- JUEGOS POPULARES -->
     <section class="section-container">
         <div class="section-header">
             <h2>🔥 Juegos Populares</h2>
@@ -57,16 +60,16 @@
         </div>
         <div class="grid-cards">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?auto=format&fit=crop&w=400&q=80" alt="GTA V">
+                <img src="https://rockgames.com.mx/wp-content/uploads/2024/08/PS5_703.jpg" alt="Grand Theft Auto V" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Grand Theft Auto V</h3>
-                    <p class="card-category">Acción • Mundo Abierto</p>
+                    <p class="card-category">Acción • Aventura</p>
                     <p class="card-price">$29.99</p>
                     <a href="gta-v.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1627856013091-feddeab4336aa?auto=format&fit=crop&w=400&q=80" alt="Minecraft">
+                <img src="https://wallpapers.com/images/hd/minecraft-background-cfljc4haleghnajo.jpg" alt="Minecraft Java" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Minecraft Java</h3>
                     <p class="card-category">Aventura • Mundo Abierto</p>
@@ -75,7 +78,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="EA Sports FC 25">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.bSJjTLlyCdX8JFlEIg-FIQHaEK?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="EA Sports FC 25" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>EA Sports FC 25</h3>
                     <p class="card-category">Deportes • Simulación</p>
@@ -84,17 +87,18 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=400&q=80" alt="Cyberpunk 2077">
+                <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2322010/capsule_616x353.jpg?t=1776465233" alt="God of War Ragnarök" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
-                    <h3>Cyberpunk 2077</h3>
-                    <p class="card-category">RPG • Acción</p>
-                    <p class="card-price">$59.99</p>
-                    <a href="cyberpunk-2077.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
+                    <h3>God of War Ragnarök</h3>
+                    <p class="card-category">Acción • Aventura</p>
+                    <p class="card-price">$49.99</p>
+                    <a href="god-of-war.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- NUEVOS LANZAMIENTOS -->
     <section class="section-container">
         <div class="section-header">
             <h2>🆕 Nuevos Lanzamientos</h2>
@@ -102,7 +106,7 @@
         </div>
         <div class="grid-cards">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=400&q=80" alt="Black Myth">
+                <img src="https://th.bing.com/th/id/OIP.rc7vgjAsFmAgshbKCdLBMQHaEK?w=301&h=180&c=7&r=0&o=7&pid=1.7&rm=3" alt="Black Myth: Wukong" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Black Myth: Wukong</h3>
                     <p class="card-category">Acción • RPG</p>
@@ -111,7 +115,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1579373903781-fd5c0c30c4cd?auto=format&fit=crop&w=400&q=80" alt="Expedition 33">
+                <img src="https://wallpapercave.com/wp/wp15315845.jpg" alt="Clair Obscur Expedition 33" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Clair Obscur: Expedition 33</h3>
                     <p class="card-category">Fantasía • RPG</p>
@@ -120,7 +124,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1560253023-3ec5d502959f?auto=format&fit=crop&w=400&q=80" alt="DOOM">
+               <img src="https://gaming-cdn.com/images/products/16798/616x353/doom-the-dark-ages-pc-game-steam-cover.jpg?v=1737717672" alt="DOOM: The Dark Ages" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>DOOM: The Dark Ages</h3>
                     <p class="card-category">Acción • Shooter</p>
@@ -129,7 +133,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&w=400&q=80" alt="Kingdom Come">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202408/1208/05a84ce968125d79fa36484c5a756a1c8d9b05622aae21c1.png" referrerpolicy="no-referrer" alt="Kingdom Come: Deliverance II" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Kingdom Come: Deliverance II</h3>
                     <p class="card-category">Medieval • RPG</p>
@@ -140,6 +144,7 @@
         </div>
     </section>
 
+    <!-- OFERTAS -->
     <section class="section-container" id="ofertas">
         <div class="section-header">
             <h2>⚡ Ofertas</h2>
@@ -147,16 +152,16 @@
         </div>
         <div class="grid-cards">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=400&q=80" alt="RDR2">
+               <img src="https://i1.sndcdn.com/artworks-000466512579-cp7kvl-t500x500.jpg" alt="Red Dead Redemption 2" style="width: 100%; height: 180px; object-fit: cover; object-position: center 30%;">
                 <div class="card-body">
                     <h3>Red Dead Redemption 2</h3>
-                    <p class="old-price">Precio Original $58.99</p>
+                    <p class="old-price">Precio Original $59.99</p>
                     <p class="card-price offer">Oferta $19.99</p>
                     <a href="red-dead-redemption-2.html" class="btn-card" style="display: block; text-align: center; text-decoration: none;">Comprar</a>
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=400&q=80" alt="The Witcher 3">
+                <img src="https://moewalls.com/wp-content/uploads/2021/05/geralt-meditation-the-witcher-3-wild-hunt-thumb.jpg" alt="The Witcher 3" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>The Witcher 3</h3>
                     <p class="old-price">Precio Original $39.99</p>
@@ -165,7 +170,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&w=400&q=80" alt="Resident Evil 4">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202210/0712/BiS5QP6h4506JHyJlZlVzK9D.jpg" referrerpolicy="no-referrer" alt="Resident Evil 4" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Resident Evil 4</h3>
                     <p class="old-price">Precio Original $49.99</p>
@@ -174,7 +179,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=400&q=80" alt="Hogwarts Legacy">
+                <img src="https://1.bp.blogspot.com/-X6et1vRHESE/X2J1GpsIksI/AAAAAAAAeB0/BxweFJFrtBYzvXlYD3PhfbF6rPZJoy6qgCLcBGAsYHQ/w1200-h630-p-k-no-nu/hogwarts-legacy-capa.jpg" alt="Hogwarts Legacy" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Hogwarts Legacy</h3>
                     <p class="old-price">Precio Original $59.99</p>
@@ -185,6 +190,7 @@
         </div>
     </section>
 
+    <!-- MÁS VENDIDOS -->
     <section class="section-container" id="mas-vendidos">
         <div class="section-header">
             <h2>⭐ Más Vendidos</h2>
@@ -192,7 +198,7 @@
         </div>
         <div class="grid-cards">
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=400&q=80" alt="Elden Ring">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.yoJ-o0s7CIVPW3dD6ITirwHaEo?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Elden Ring" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Elden Ring</h3>
                     <p class="card-category">Acción • RPG</p>
@@ -201,7 +207,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=400&q=80" alt="Baldur's Gate 3">
+                <img src="https://tse3.mm.bing.net/th/id/OIP.nCtf2HgmOgu4OcyfXtF-WgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Baldur's Gate 3" style="width: 100%; height: 180px; object-fit: cover; object-position: center 30%;">
                 <div class="card-body">
                     <h3>Baldur's Gate 3</h3>
                     <p class="card-category">Acción • Estrategia</p>
@@ -210,7 +216,7 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751110-97427bbecf20?auto=format&fit=crop&w=400&q=80" alt="Helldivers 2">
+                <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2024/08/helldivers-2-keyart.jpg" alt="Helldivers 2" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Helldivers 2</h3>
                     <p class="card-category">Acción • Cooperativa</p>
@@ -219,7 +225,8 @@
                 </div>
             </div>
             <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=400&q=80" alt="Forza Horizon 6">
+                <!-- Imagen actualizada de Forza Horizon 6 -->
+                <img src="https://dailygame.at/wp-content/uploads/2025/09/Forza-Horizon-6-c-Playground-Games.jpg" alt="Forza Horizon 6" style="width: 100%; height: 180px; object-fit: cover;">
                 <div class="card-body">
                     <h3>Forza Horizon 6</h3>
                     <p class="card-category">Carreras</p>
@@ -230,6 +237,7 @@
         </div>
     </section>
 
+    <!-- PIE DE PÁGINA -->
     <footer class="footer" id="contacto">
         <div class="footer-content">
             <div class="footer-col brand-col">
@@ -242,7 +250,7 @@
                 <h3>Enlaces</h3>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="catalogo.html">Catalogo</a></li>
+                    <li><a href="catalogo.html">Catálogo</a></li>
                     <li><a href="mas-vendidos.html">Mas vendidos</a></li>
                     <li><a href="ofertas.html">Ofertas</a></li>
                     <li><a href="contacto.html">Contacto</a></li>
@@ -251,10 +259,10 @@
             <div class="footer-col">
                 <h3>Soporte</h3>
                 <ul>
-                    <li><a href="#">Centro de ayuda</a></li>
-                    <li><a href="#">Preguntas frecuentes</a></li>
-                    <li><a href="#">Política de privacidad</a></li>
-                    <li><a href="#">Términos y condiciones</a></li>
+                    <li><a href="#"><i class="fa-solid fa-headset"></i> Centro de ayuda</a></li>
+                    <li><a href="#"><i class="fa-solid fa-question-circle"></i> Preguntas frecuentes</a></li>
+                    <li><a href="#"><i class="fa-solid fa-shield-alt"></i> Política de privacidad</a></li>
+                    <li><a href="#"><i class="fa-solid fa-file-contract"></i> Términos y condiciones</a></li>
                 </ul>
             </div>
             <div class="footer-col">
